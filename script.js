@@ -1062,12 +1062,13 @@ function checkAnswers() {
 const submitButton = document.getElementById("submitBtn");
 submitButton.addEventListener("click", () => {
   checkAnswers();
+  showResults(); // checkAnswers 다음에 showResults를 호출
 });
 
 // 결과 페이지로 이동하는 함수
-// 이벤트 핸들러 함수를 정의합니다.
 function showResults() {
-  window.location.href = "result.html"; // 결과 페이지로 이동
+  const resultUrl = "result.html"; // 결과 페이지 URL
+  window.location.href = resultUrl;
 }
 
 // 문항 동적 생성 함수

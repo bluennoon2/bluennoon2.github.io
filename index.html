@@ -3,24 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>독서 능력 진단 검사</title>
     <link rel="stylesheet" href="styles.css" />
-    <title>독서 능력 진단 테스트</title>
   </head>
   <body>
     <header>
-      <h1>독서 능력 진단 테스트</h1>
+      <h1>독서 능력 진단 검사</h1>
     </header>
-
-    <section id="instructions">
-      <h2>테스트 지침</h2>
-      <p>각 문항의 정답을 선택하세요.</p>
-    </section>
-
-    <section id="questions">
+    <div id="questions" class="container">
       <!-- 문항이 동적으로 생성될 자리 -->
-    </section>
+    </div>
 
-    <button id="submitBtn">결과 보기</button>
+    <button id="submitBtn">제출</button>
+
+    <div id="result" class="result"></div>
 
     <script src="script.js"></script>
   </body>

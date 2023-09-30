@@ -52,6 +52,7 @@ h2 {
 /* 결과 표시 스타일 */
 #result {
   text-align: center;
+  font-size: 24px;
   margin-top: 20px;
 }
 

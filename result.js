@@ -1,25 +1,22 @@
-// 결과 페이지에서 query parameter에서 점수를 추출합니다.
+// URL에서 전달된 점수 가져오기
 const urlParams = new URLSearchParams(window.location.search);
-const score = parseInt(urlParams.get("score"));
+const score = urlParams.get("score");
+const numQuestions = urlParams.get("numQuestions");
 
-// 결과 표시
-const scoreText = document.getElementById("score");
-const message = document.getElementById("message");
-const restartBtn = document.getElementById("restartBtn");
+// 결과 메시지 생성
+const resultMessage = document.createElement("p");
+resultMessage.textContent = `점수: ${score} / ${numQuestions}`;
+resultMessage.classList.add("result-message");
 
-scoreText.textContent = `점수: ${score} / ${questions.length}`;
+// 결과를 표시할 요소 선택
+const resultContainer = document.getElementById("result");
 
-// 점수에 따른 메시지 설정 (원하는 메시지로 수정 가능)
-if (score >= 80) {
-  message.textContent = "훌륭한 독서 능력입니다!";
-} else if (score >= 60) {
-  message.textContent = "좋은 독서 능력을 보여주셨어요.";
-} else {
-  message.textContent = "도서 읽기 습관을 더 개선해보세요.";
-}
+// 결과 메시지를 결과 페이지에 추가
+resultContainer.appendChild(resultMessage);
 
-// 다시 시작 버튼 클릭 이벤트 처리
-restartBtn.addEventListener("click", () => {
-  // 테스트 페이지로 돌아갑니다.
+// 다시 시작 버튼 클릭 시 이벤트 처리
+const restartButton = document.getElementById("restartBtn");
+restartButton.addEventListener("click", () => {
+  // 다시 검사를 시작할 페이지로 이동
   window.location.href = "index.html";
 });
