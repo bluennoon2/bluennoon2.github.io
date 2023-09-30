@@ -1065,10 +1065,9 @@ submitButton.addEventListener("click", () => {
 });
 
 // 결과 페이지로 이동하는 함수
-function navigateToResult(score) {
-  // 결과 페이지 URL (result.html)로 이동하며, 점수를 query parameter로 전달합니다.
-  const resultUrl = `result.html`;
-  window.location.href = resultUrl;
+// 이벤트 핸들러 함수를 정의합니다.
+function showResults() {
+  window.location.href = "result.html"; // 결과 페이지로 이동
 }
 
 // 문항 동적 생성 함수
